@@ -238,12 +238,12 @@ class IMGKit(object):
             return stdout
         else:
             try:
-                with codecs.open(path) as f:
-                    text = f.read(4)
-                    if text == '':
-                        raise IOError('Command failed: %s\n'
-                                      'Check whhtmltoimage output without \'quiet\' '
-                                      'option' % ' '.join(args))
+                # with codecs.open(path) as f:
+                #     text = f.read(4)
+                #     if text == '':
+                #         raise IOError('Command failed: %s\n'
+                #                       'Check whhtmltoimage output without \'quiet\' '
+                #                       'option' % ' '.join(args))
                     return True
             except IOError as e:
                 raise IOError('Command failed: %s\n'
